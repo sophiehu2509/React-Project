@@ -1,0 +1,28 @@
+*{
+
+} 
+.container{
+    position: absolute;
+    top:10%;
+    left:10%;
+    width:80%;
+    height:80%;
+    
+}
+.logo {
+    width:200px;
+    height:200px;
+    border-radius: 5px;
+    margin-bottom: -10px;
+}
+
+.logoLabel{
+    background-color: red;
+    width:120px;
+    padding:5px;
+    height:20px;
+}
+.countNum, .sepCountNum{
+  margin-top:30px;
+  font-size:20px;
+}
