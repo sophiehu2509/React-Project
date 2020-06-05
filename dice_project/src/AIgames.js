@@ -16,51 +16,51 @@ export default function Games(props) {
       six:
         "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/dice-six-faces-six.svg"
     }
-    
-     if(props.yourStatus === ""){
-         return (
-             <>
-             </>
-         )
-     }
-    if (props.yourStatus === 1){
+    if(props.yourStatus === ""){
+        return (
+            <>
+            </>
+        )
+    }
+
+    if (props.AIStatus === 1){
         return (
             <div>
-                 You:<img src={diceImg.one} alt="1" width="40px"/> 
+                 AI:<img src={diceImg.one} alt="1" width="40px"/> 
             </div>
         ) 
-    }else if (props.yourStatus === 2){
+    }else if (props.AIStatus === 2){
         return (
             <div>
-                 You:<img src={diceImg.two} alt="1" width="40px"/> 
+                 AI:<img src={diceImg.two} alt="1" width="40px"/> 
             </div>
         ) 
     }
-    else if (props.yourStatus === 3){
+    else if (props.AIStatus === 3){
         return (
             <div>
-                 You:<img src={diceImg.three} alt="1" width="40px"/> 
+                 AI:<img src={diceImg.three} alt="1" width="40px"/> 
             </div>
         ) 
     }
-    else if (props.yourStatus === 4){
+    else if (props.AIStatus === 4){
         return (
             <div>
-                 You:<img src={diceImg.four} alt="1" width="40px"/> 
+                 AI:<img src={diceImg.four} alt="1" width="40px"/> 
             </div>
         ) 
     }
-    else if (props.yourStatus === 5){
+    else if (props.AIStatus === 5){
         return (
             <div>
-                 You:<img src={diceImg.five} alt="1" width="40px"/> 
+                 AI:<img src={diceImg.five} alt="1" width="40px"/> 
             </div>
         ) 
     }
     else {
         return (
             <div>
-                 You:<img src={diceImg.six} alt="1" width="40px"/> 
+                 AI:<img src={diceImg.six} alt="1" width="40px"/> 
             </div>
         ) 
     }

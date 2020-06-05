@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import './Interface.css'
+import Games from './Games'
+import AIgames from './AIgames'
 
 export default class Interface extends Component {
     constructor(props){
@@ -11,17 +13,27 @@ export default class Interface extends Component {
             games:0,
             wins: [],
             draws:[],
-            losses: []
+            losses: [],
+           
         }
        
     }
     
      handleImgClick =() => {
         this.setState({
-            games: this.state.games +1
+            games: this.state.games +1,
+            yourStatus: Math.floor(Math.random() * 6) + 1
         })
+        this.handleDice();
      }
     
+     handleDice = () => {
+        
+         this.setState({
+            AIStatus: Math.floor(Math.random() * 6) + 1,
+         })
+     }
+
     
 
     render() {
@@ -32,12 +44,18 @@ export default class Interface extends Component {
                     <span className="logoLabel">Clear</span>
                 </div>
                 <div className="sepCountNum">
-                    You:{this.state.yourStatus} AI:{this.state.AIStatus}
+                <div>
+                    You:{this.state.yourStatus} AI:{this.state.AIStatus}   
+                </div>
+                <div className="showImg"> 
+                     <Games {...this.state}/>  <AIgames {...this.state}/>
+                </div>
+                  
                 </div>
                 <div className="countNum">
                     Games:{this.state.games}
                 </div>
-                <div className=""></div>
+                <div className="">wins:{} losses:{} draws:{}</div>
             </div>
         )
     }
