@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import './Interface.css'
 import Games from './Games'
 import AIgames from './AIgames'
+import GameCount from './GameCount'
+import ResultStatus from './ResultStatus'
 
 export default class Interface extends Component {
     constructor(props){
@@ -34,7 +36,7 @@ export default class Interface extends Component {
          })
      }
 
-    
+  
 
     render() {
         return (
@@ -47,15 +49,18 @@ export default class Interface extends Component {
                 <div>
                     You:{this.state.yourStatus} AI:{this.state.AIStatus}   
                 </div>
+                <ResultStatus className = "result" {...this.state}/>
                 <div className="showImg"> 
-                     <Games {...this.state}/>  <AIgames {...this.state}/>
+                     <Games {...this.state}/>
+                     <AIgames {...this.state}/>
                 </div>
                   
                 </div>
                 <div className="countNum">
                     Games:{this.state.games}
                 </div>
-                <div className="">wins:{} losses:{} draws:{}</div>
+                <GameCount {...this.state}/>
+                {/* <div className="">wins:{} losses:{} draws:{}</div> */}
             </div>
         )
     }

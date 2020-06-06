@@ -25,43 +25,43 @@ export default function Games(props) {
 
     if (props.AIStatus === 1){
         return (
-            <div>
+            <span>
                  AI:<img src={diceImg.one} alt="1" width="40px"/> 
-            </div>
+            </span>
         ) 
     }else if (props.AIStatus === 2){
         return (
-            <div>
+            <span>
                  AI:<img src={diceImg.two} alt="1" width="40px"/> 
-            </div>
+            </span>
         ) 
     }
     else if (props.AIStatus === 3){
         return (
-            <div>
+            <span>
                  AI:<img src={diceImg.three} alt="1" width="40px"/> 
-            </div>
+            </span>
         ) 
     }
     else if (props.AIStatus === 4){
         return (
-            <div>
+            <span>
                  AI:<img src={diceImg.four} alt="1" width="40px"/> 
-            </div>
+            </span>
         ) 
     }
     else if (props.AIStatus === 5){
         return (
-            <div>
+            <span>
                  AI:<img src={diceImg.five} alt="1" width="40px"/> 
-            </div>
+            </span>
         ) 
     }
     else {
         return (
-            <div>
+            <span>
                  AI:<img src={diceImg.six} alt="1" width="40px"/> 
-            </div>
+            </span>
         ) 
     }
     

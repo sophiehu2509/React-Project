@@ -25,43 +25,43 @@ export default function Games(props) {
      }
     if (props.yourStatus === 1){
         return (
-            <div>
+            <span>
                  You:<img src={diceImg.one} alt="1" width="40px"/> 
-            </div>
+            </span>
         ) 
     }else if (props.yourStatus === 2){
         return (
-            <div>
+            <span>
                  You:<img src={diceImg.two} alt="1" width="40px"/> 
-            </div>
+            </span>
         ) 
     }
     else if (props.yourStatus === 3){
         return (
-            <div>
+            <span>
                  You:<img src={diceImg.three} alt="1" width="40px"/> 
-            </div>
+            </span>
         ) 
     }
     else if (props.yourStatus === 4){
         return (
-            <div>
+            <span>
                  You:<img src={diceImg.four} alt="1" width="40px"/> 
-            </div>
+            </span>
         ) 
     }
     else if (props.yourStatus === 5){
         return (
-            <div>
+            <span>
                  You:<img src={diceImg.five} alt="1" width="40px"/> 
-            </div>
+            </span>
         ) 
     }
     else {
         return (
-            <div>
+            <span>
                  You:<img src={diceImg.six} alt="1" width="40px"/> 
-            </div>
+            </span>
         ) 
     }
     

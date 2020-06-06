@@ -24,6 +24,15 @@
   font-size:20px;
 }
 .showImg {
-    display: inline;
+    margin-top:100px;
+}
+.showImg > span {
+    margin:100px;
    
+}
+
+.result{
+    background-color: yellow;
+    width:250px;
+    margin:auto;
 }
