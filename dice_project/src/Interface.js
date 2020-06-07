@@ -36,20 +36,30 @@ export default class Interface extends Component {
          })
      }
 
-  
+    handleClear = () => {
+        this.setState({
+            ...this.state,
+            yourStatus: "",
+            AIStatus:"",
+            games:0,
+            wins: [],
+            draws:[],
+            losses: [],
+        })
+    }
 
     render() {
         return (
             <div className="container">
                 <div style={{verticalAlign:'sub'}}> 
                     <img className="logo" onClick={this.handleImgClick} src="https://game-icons.net/icons/ffffff/000000/1x1/delapouite/perspective-dice-six-faces-random.svg" alt="Logo"/>
-                    <span className="logoLabel">Clear</span>
+                    <span className="logoLabel" onClick={this.handleClear}>Clear</span>
                 </div>
                 <div className="sepCountNum">
                 <div>
                     You:{this.state.yourStatus} AI:{this.state.AIStatus}   
                 </div>
-                <ResultStatus className = "result" {...this.state}/>
+                <ResultStatus {...this.state}/>
                 <div className="showImg"> 
                      <Games {...this.state}/>
                      <AIgames {...this.state}/>

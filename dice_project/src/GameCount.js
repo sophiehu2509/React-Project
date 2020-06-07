@@ -1,7 +1,14 @@
 import React from 'react'
 
 export default function GameCount(props) {
-  
+    if(props.yourStatus  === ""){
+        return (
+        
+            <div>
+                wins:{} losses:{} draws:{}
+            </div>
+        )
+    }
 
     if(props.yourStatus > props.AIStatus){
 
